@@ -1,8 +1,8 @@
 {
   "$schema": "../node_modules/@tauri-apps/cli/schema.json",
   "build": {
-    "beforeBuildCommand": "cd ../mirror && npm run build",
-    "beforeDevCommand": "cd ../mirror && npm run dev",
+    "beforeBuildCommand": "cd mirror && npm run build",
+    "beforeDevCommand": "cd mirror && npm run dev",
     "devPath": "http://localhost:1420",
     "distDir": "../build"
   },
