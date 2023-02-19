@@ -31,6 +31,8 @@ jobs:
         run: cd mirror && npm ci
       - name: Install tauri dependencies
         run: npm ci
+      - name: debug
+        run: pwd && ls && ls ..
       - name: Build desktop app with Tauri
         uses: tauri-apps/tauri-action@v0
         env:
