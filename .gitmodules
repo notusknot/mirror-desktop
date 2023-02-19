@@ -1,0 +1,6 @@
+[submodule "productivity"]
+	path = productivity
+	url = https://github.com/notusknot/productivity
+[submodule "mirror"]
+	path = mirror
+	url = https://github.com/notusknot/mirror
