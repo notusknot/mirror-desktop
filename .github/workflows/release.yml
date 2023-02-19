@@ -27,11 +27,12 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libgtk-3-dev libwebkit2gtk-4.0-dev libappindicator3-dev librsvg2-dev patchelf
-      - name: debug
-        run: pwd && ls
       - name: install app dependencies and build it
-        run: cd mirror && npm ci && npm run build
-      - uses: tauri-apps/tauri-action@v0
+        run: cd mirror && npm ci
+      - name: Install tauri dependencies
+        run: npm ci
+      - name: Build desktop app with Tauri
+        uses: tauri-apps/tauri-action@v0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
