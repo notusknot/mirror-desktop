@@ -32,7 +32,7 @@ jobs:
       - name: Install tauri dependencies
         run: npm ci
       - name: debug
-        run: pwd && ls && ls ..
+        run: ls mirror && echo "\n" && cat mirror/package.json 
       - name: Build desktop app with Tauri
         uses: tauri-apps/tauri-action@v0
         env:
